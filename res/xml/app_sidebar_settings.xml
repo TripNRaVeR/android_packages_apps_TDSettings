@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/app_sidebar_title"
+    xmlns:settings="http://schemas.android.com/apk/res/com.tripndroid.tdsettings">
+
+    <CheckBoxPreference
+        android:key="sidebar_enable"
+        android:title="@string/app_sidebar_enable_title"
+        android:defaultValue="false" />
+
+    <ListPreference
+        android:key="sidebar_sort_type"
+        android:title="@string/app_sidebar_sort_type_title"
+        android:entries="@array/app_sidebar_sort_type_entries"
+        android:entryValues="@array/app_sidebar_sort_type_values"
+        android:persistent="false"
+        android:dependency="sidebar_enable" />
+
+</PreferenceScreen>
