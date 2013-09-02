@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/performance_settings_title">
+
+    <PreferenceScreen
+        android:key="processor"
+        android:fragment="com.tripndroid.tdsettings.fragments.Processor"
+        android:title="@string/processor_title"
+        android:summary="@string/processor_summary" />
+
+    <PreferenceScreen
+        android:key="ioscheduler"
+        android:fragment="com.tripndroid.tdsettings.fragments.IOScheduler"
+        android:title="@string/io_settings_title"
+        android:summary="@string/io_scheds_summary" />
+
+    <PreferenceScreen
+        android:key="memory_management"
+        android:fragment="com.tripndroid.tdsettings.fragments.MemoryManagement"
+        android:title="@string/memory_management_title"
+        android:summary="@string/memory_management_summary" />
+
+    <CheckBoxPreference
+        android:key="pref_use_16bpp_alpha"
+        android:title="@string/pref_use_16bpp_alpha_title"
+        android:summary="@string/pref_use_16bpp_alpha_summary" />
+
+</PreferenceScreen>

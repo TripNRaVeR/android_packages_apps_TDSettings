@@ -1,0 +1,28 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <header android:title="@string/user_interface" />
+
+    <header
+        android:id="@+id/user_interface"
+        android:fragment="com.tripndroid.tdsettings.fragments.MiscSettings"
+        android:title="@string/general_settings_title"
+        android:icon="@drawable/ic_tdsettings_general_ui"
+        android:summary="@string/header_summary_general_settings" />
+
+    <header
+        android:id="@+id/lcd_density_setup"
+        android:fragment="com.tripndroid.tdsettings.fragments.DensityChanger"
+        android:title="@string/lcd_density_title"
+        android:icon="@drawable/ic_tdsettings_density"
+        android:summary="@string/lcd_density_summary" />
+
+    <header android:title="@string/tuning_category" />
+
+    <header
+        android:id="@+id/performance_settings"
+        android:fragment="com.tripndroid.tdsettings.fragments.PerformanceSettings"
+        android:title="@string/performance_settings_title"
+        android:icon="@drawable/ic_settings_performance"
+        android:summary="@string/header_summary_performance" />
+
+</preference-headers>
