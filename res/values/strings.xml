@@ -44,6 +44,10 @@
     <string name="menu_notif_wallpaper_reset">Reset notification wallpaper</string>
 
     <!-- Lockscreen Strings -->
+    <string name="lock_screen_settings">Lockscreen</string>
+    <string name="lock_screen_settings_summary">refine you\'re lockscreen setup here</string>
+    <string name="see_through_title">See through</string>
+    <string name="see_through_summary">Allows to see the application behind the lock screen.</string>
     <string name="category_general_lockscreen">General Lockscreen</string>
     <string name="lockscreen_use_widget_container_carousel_title">Use widget carousel</string>
     <string name="lockscreen_use_widget_container_carousel_summary">Use a carousel animation when switching between lockscreen widgets.</string>

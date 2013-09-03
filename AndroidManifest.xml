@@ -73,6 +73,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".fragments.Lockscreen"
+            android:label="@string/lock_screen_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="com.tripndroid.tdsettings.SHORTCUT"/>
+            </intent-filter>
+        </activity>
+        <activity
             android:name="CreateShortcut"
             android:theme="@style/Theme.CreateShortCut">
             <intent-filter>

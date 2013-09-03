@@ -16,6 +16,13 @@
         android:icon="@drawable/ic_tdsettings_density"
         android:summary="@string/lcd_density_summary" />
 
+    <header
+        android:id="@+id/lock_screen_settings"
+        android:fragment="com.tripndroid.tdsettings.fragments.Lockscreen"
+        android:title="@string/lock_screen_settings"
+        android:icon="@drawable/ic_tdsettings_lockscreen"
+        android:summary="@string/lock_screen_settings_summary" />
+
     <header android:title="@string/tuning_category" />
 
     <header
