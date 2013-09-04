@@ -93,7 +93,7 @@ public class MiscSettings extends TRIPNDROIDPreferenceFragment implements OnPref
     private static final CharSequence PREF_CUSTOM_CARRIER_LABEL = "custom_carrier_label";
     private static final CharSequence PREF_NOTIFICATION_WALLPAPER = "notification_wallpaper";
     private static final CharSequence PREF_NOTIFICATION_WALLPAPER_ALPHA = "notification_wallpaper_alpha";
-    private static final String PREF_LOCKSCREEN_USE_CAROUSEL = "lockscreen_use_widget_container_carousel";
+
     private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
     private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
 
@@ -104,7 +104,6 @@ public class MiscSettings extends TRIPNDROIDPreferenceFragment implements OnPref
     private Preference mNotificationWallpaper;
     private Preference mWallpaperAlpha;
 
-    private CheckBoxPreference mLockscreenUseCarousel;
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
 
@@ -132,10 +131,6 @@ public class MiscSettings extends TRIPNDROIDPreferenceFragment implements OnPref
 
         mNotificationWallpaper = findPreference(PREF_NOTIFICATION_WALLPAPER);
         mWallpaperAlpha = (Preference) findPreference(PREF_NOTIFICATION_WALLPAPER_ALPHA);
-
-        mLockscreenUseCarousel = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_USE_CAROUSEL);
-        mLockscreenUseCarousel.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(),
-                Settings.System.LOCKSCREEN_USE_WIDGET_CONTAINER_CAROUSEL, false));
 
         mListViewAnimation = (ListPreference) findPreference(KEY_LISTVIEW_ANIMATION);
         int listviewanimation = Settings.System.getInt(getActivity().getContentResolver(),
@@ -276,11 +271,6 @@ public class MiscSettings extends TRIPNDROIDPreferenceFragment implements OnPref
             })
             .create()
             .show();
-            return true;
-        } else if (preference == mLockscreenUseCarousel) {
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.LOCKSCREEN_USE_WIDGET_CONTAINER_CAROUSEL,
-                    ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
             return true;
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);

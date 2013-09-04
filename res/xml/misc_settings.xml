@@ -37,12 +37,4 @@
             android:entryValues="@array/listview_interpolator_values"
             android:defaultValue="0" />
 
-        <PreferenceCategory
-            android:title="@string/category_general_lockscreen" />
-
-        <CheckBoxPreference
-            android:key="lockscreen_use_widget_container_carousel"
-            android:title="@string/lockscreen_use_widget_container_carousel_title"
-            android:summary="@string/lockscreen_use_widget_container_carousel_summary" />
-
 </PreferenceScreen>

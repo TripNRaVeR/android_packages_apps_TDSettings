@@ -2,9 +2,17 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/lock_screen_settings">
 
-    <CheckBoxPreference
-        android:key="see_through"
-        android:title="@string/see_through_title"
-        android:summary="@string/see_through_summary" />
+        <CheckBoxPreference
+            android:key="see_through"
+            android:title="@string/see_through_title"
+            android:summary="@string/see_through_summary" />
+
+        <PreferenceCategory
+            android:title="@string/category_general_lockscreen" />
+
+        <CheckBoxPreference
+            android:key="lockscreen_use_widget_container_carousel"
+            android:title="@string/lockscreen_use_widget_container_carousel_title"
+            android:summary="@string/lockscreen_use_widget_container_carousel_summary" />
 
 </PreferenceScreen>

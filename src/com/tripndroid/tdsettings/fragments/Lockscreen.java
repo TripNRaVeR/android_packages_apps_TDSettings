@@ -31,8 +31,10 @@ public class Lockscreen extends TRIPNDROIDPreferenceFragment
         implements OnPreferenceChangeListener {
 
     public static final String KEY_SEE_TRHOUGH = "see_through";
+    public static final String PREF_LOCKSCREEN_USE_CAROUSEL = "lockscreen_use_widget_container_carousel";
 
     private CheckBoxPreference mSeeThrough;
+    private CheckBoxPreference mLockscreenUseCarousel;
 
     private Context mContext;
 
@@ -45,6 +47,11 @@ public class Lockscreen extends TRIPNDROIDPreferenceFragment
         mContext = getActivity();
 
         mSeeThrough = (CheckBoxPreference) prefSet.findPreference(KEY_SEE_TRHOUGH);
+
+        mLockscreenUseCarousel = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_USE_CAROUSEL);
+        mLockscreenUseCarousel.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(),
+                Settings.System.LOCKSCREEN_USE_WIDGET_CONTAINER_CAROUSEL, false));
+
     }
 
     @Override
@@ -53,7 +60,13 @@ public class Lockscreen extends TRIPNDROIDPreferenceFragment
             Settings.System.putInt(mContext.getContentResolver(),
                     Settings.System.LOCKSCREEN_SEE_THROUGH, mSeeThrough.isChecked()
                     ? 1 : 0);
-        }
+            return true;
+        } else if (preference == mLockscreenUseCarousel) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.LOCKSCREEN_USE_WIDGET_CONTAINER_CAROUSEL,
+                    ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
+            return true;
+        } 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
