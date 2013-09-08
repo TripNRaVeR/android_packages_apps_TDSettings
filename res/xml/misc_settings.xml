@@ -13,11 +13,6 @@
             android:key="notification_wallpaper_alpha"
             android:title="@string/notif_wallpaper_alpha_title" />
 
-        <Preference
-            android:key="app_sidebar"
-            android:fragment="com.tripndroid.tdsettings.fragments.AppSidebar"
-            android:title="@string/app_sidebar_title" />
-
         <PreferenceCategory
             android:title="@string/category_animations" />
 
