@@ -26,4 +26,19 @@
         android:title="@string/pref_use_16bpp_alpha_title"
         android:summary="@string/pref_use_16bpp_alpha_summary" />
 
+    <PreferenceCategory
+        android:title="@string/category_tdf" />
+
+    <CheckBoxPreference
+        android:key="powersave_active"
+        android:title="@string/powersaving_active_title_head"
+        android:summary="@string/powersaving_active_summary_head"
+        android:defaultValue="0" />
+
+    <CheckBoxPreference
+        android:key="fastcharge"
+        android:title="@string/fastcharge_title_head"
+        android:summary="@string/fastcharge_summary_head"
+        android:defaultValue="0" />
+
 </PreferenceScreen>

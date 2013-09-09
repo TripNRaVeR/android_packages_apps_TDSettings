@@ -23,6 +23,7 @@ import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.ListPreference;
 import android.preference.PreferenceScreen;
+import android.preference.TwoStatePreference;
 
 import com.tripndroid.tdsettings.TRIPNDROIDPreferenceFragment;
 import com.tripndroid.tdsettings.util.Helpers;
@@ -38,7 +39,13 @@ public class PerformanceSettings extends TRIPNDROIDPreferenceFragment {
 
     private static final String USE_16BPP_ALPHA_PROP = "persist.sys.use_16bpp_alpha";
 
+    public static final String TDF_FASTCHARGE = "fastcharge";
+
+    public static final String TDF_POWERSAVINGACTIVE = "powersave_active";
+
     private CheckBoxPreference mUse16bppAlphaPref;
+    private TwoStatePreference mFastcharge;
+    private TwoStatePreference mPowerSavingActive;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -51,6 +58,14 @@ public class PerformanceSettings extends TRIPNDROIDPreferenceFragment {
         mUse16bppAlphaPref = (CheckBoxPreference) prefSet.findPreference(USE_16BPP_ALPHA_PREF);
         String use16bppAlpha = SystemProperties.get(USE_16BPP_ALPHA_PROP, "0");
         mUse16bppAlphaPref.setChecked("1".equals(use16bppAlpha));
+
+        mFastcharge = (TwoStatePreference) findPreference(TDF_FASTCHARGE);
+        mFastcharge.setEnabled(Fastcharge.isSupported());
+        mFastcharge.setOnPreferenceChangeListener(new Fastcharge());
+
+        mPowerSavingActive = (TwoStatePreference) findPreference(TDF_POWERSAVINGACTIVE);
+        mPowerSavingActive.setEnabled(PowerSavingActive.isSupported());
+        mPowerSavingActive.setOnPreferenceChangeListener(new PowerSavingActive());
 
     }
 

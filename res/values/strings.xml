@@ -207,4 +207,11 @@
    <!-- DualPanel UI -->
    <string name="multipane_ui">Use DualPanel interface</string>
 
+   <!-- TripNDroid Framework -->
+    <string name="category_tdf">TripNDroid Framework</string>
+    <string name="powersaving_active_title_head">Powersaving mode</string>
+    <string name="powersaving_active_summary_head">Use TDF powersaving mode to save power and still use the device properly</string>
+    <string name="fastcharge_title_head">Fast Charge</string>
+    <string name="fastcharge_summary_head">Charge phone like its connected to AC</string>
+
 </resources>
