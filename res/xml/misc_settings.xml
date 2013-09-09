@@ -13,6 +13,11 @@
             android:key="notification_wallpaper_alpha"
             android:title="@string/notif_wallpaper_alpha_title" />
 
+        <CheckBoxPreference
+            android:key="force_dualpanel"
+            android:title="@string/multipane_ui"
+            android:defaultValue="false" />
+
         <PreferenceCategory
             android:title="@string/category_animations" />
 

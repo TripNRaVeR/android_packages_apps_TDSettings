@@ -94,6 +94,7 @@ public class MiscSettings extends TRIPNDROIDPreferenceFragment implements OnPref
     private static final CharSequence PREF_NOTIFICATION_WALLPAPER = "notification_wallpaper";
     private static final CharSequence PREF_NOTIFICATION_WALLPAPER_ALPHA = "notification_wallpaper_alpha";
 
+    private static final String PREF_FORCE_DUAL_PANEL = "force_dualpanel";
     private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
     private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
 
@@ -104,6 +105,7 @@ public class MiscSettings extends TRIPNDROIDPreferenceFragment implements OnPref
     private Preference mNotificationWallpaper;
     private Preference mWallpaperAlpha;
 
+    private CheckBoxPreference mDualpane;
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
 
@@ -131,6 +133,9 @@ public class MiscSettings extends TRIPNDROIDPreferenceFragment implements OnPref
 
         mNotificationWallpaper = findPreference(PREF_NOTIFICATION_WALLPAPER);
         mWallpaperAlpha = (Preference) findPreference(PREF_NOTIFICATION_WALLPAPER_ALPHA);
+
+        mDualpane = (CheckBoxPreference) findPreference(PREF_FORCE_DUAL_PANEL);
+            mDualpane.setOnPreferenceChangeListener(this);
 
         mListViewAnimation = (ListPreference) findPreference(KEY_LISTVIEW_ANIMATION);
         int listviewanimation = Settings.System.getInt(getActivity().getContentResolver(),
@@ -179,6 +184,11 @@ public class MiscSettings extends TRIPNDROIDPreferenceFragment implements OnPref
                     Settings.System.LISTVIEW_INTERPOLATOR,
                     listviewinterpolator);
             mListViewInterpolator.setSummary(mListViewInterpolator.getEntries()[index]);
+            return true;
+        } else if (preference == mDualpane) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.FORCE_DUAL_PANEL,
+                    ((CheckBoxPreference)preference).isChecked() ? 0 : 1);
             return true;
         }
         return false;

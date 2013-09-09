@@ -204,4 +204,7 @@
     <string name="trigger_bottom_title">Trigger height</string>
     <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
 
+   <!-- DualPanel UI -->
+   <string name="multipane_ui">Use DualPanel interface</string>
+
 </resources>
