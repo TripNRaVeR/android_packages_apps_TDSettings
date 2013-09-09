@@ -17,7 +17,7 @@
 
     <!-- Header Summaries -->
     <string name="header_summary_general_settings">some general settings to play with</string>
-    <string name="header_summary_performance">lets make you\'re device even faster</string>
+    <string name="header_summary_performance">let\'s make your device even faster</string>
 
     <!-- General Summaries -->
     <string name="io_sched_summary" translatable="false">%S</string>
@@ -45,7 +45,7 @@
 
     <!-- Lockscreen Strings -->
     <string name="lock_screen_settings">Lockscreen</string>
-    <string name="lock_screen_settings_summary">refine you\'re lockscreen setup here</string>
+    <string name="lock_screen_settings_summary">refine your lockscreen setup here</string>
     <string name="see_through_title">See through</string>
     <string name="see_through_summary">Allows to see the application behind the lock screen.</string>
     <string name="category_general_lockscreen">General Lockscreen</string>
@@ -175,7 +175,7 @@
 
     <!-- Sidebar -->
     <string name="app_sidebar_title">Sidebar</string>
-    <string name="app_sidebar_summary">enable and customize you\'re sidebar</string>
+    <string name="app_sidebar_summary">enable and customize your sidebar</string>
     <string name="app_sidebar_enable_title">Enable sidebar</string>
     <string name="app_sidebar_enable_summaryOn">Sidebar is enabled</string>
     <string name="app_sidebar_enable_summaryOff">Sidebar is disabled</string>
