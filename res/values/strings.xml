@@ -214,4 +214,8 @@
     <string name="fastcharge_title_head">Fast Charge</string>
     <string name="fastcharge_summary_head">Charge phone like its connected to AC</string>
 
+    <!-- OnClick Fliptile animation -->
+    <string name="flip_qs_tiles_title">Flip tiles</string>
+    <string name="flip_qs_tiles_summary">Flips the tiles on touch</string>
+
 </resources>
